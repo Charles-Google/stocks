@@ -1,21 +1,8 @@
 import { TLineChartData } from '../types'
 
-const months = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December',
-]
+const months = ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月']
 
-const getSize = (minSize = 5) => Math.max(minSize, new Date().getMonth())
+const getSize = (minSize = 12) => Math.max(minSize, new Date().getMonth())
 const size = getSize()
 
 const generateValue = () => Math.floor(Math.random() * 100)
@@ -23,7 +10,7 @@ const generateArray = (length: number) => Array.from(Array(length), generateValu
 
 const generateYLabels = () => {
   const flip = !!Math.floor(Math.random() * 2)
-  return flip ? ['Debit', 'Credit'] : ['Credit', 'Debit']
+  return flip ? ['实时股价', '增长概率'] : ['增长概率', '实时股价']
 }
 const yLabels = generateYLabels()
 

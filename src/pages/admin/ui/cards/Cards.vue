@@ -79,12 +79,13 @@
         </va-card>
       </template>
     </div>
-
+    <!-- 该加载作为加载模板 -->
+    <!-- 
     <va-inner-loading class="w-full py-4 justify-center" :loading="isLoading">
       <va-button @click="addCards()">
         {{ t('cards.button.showMore') }}
       </va-button>
-    </va-inner-loading>
+    </va-inner-loading> -->
   </div>
 </template>
 
@@ -94,13 +95,13 @@
   const { t } = useI18n()
 
   const listLoops = ref(1)
-  const isLoading = ref(false)
+  // const isLoading = ref(false)
 
-  function addCards() {
-    isLoading.value = true
-    setTimeout(() => {
-      isLoading.value = false
-      ++listLoops.value
-    }, 1000)
-  }
+  // function addCards() {
+  //   isLoading.value = true
+  //   setTimeout(() => {
+  //     isLoading.value = false
+  //     ++listLoops.value
+  //   }, 1000)
+  // }
 </script>

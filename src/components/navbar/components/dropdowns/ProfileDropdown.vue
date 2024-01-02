@@ -32,10 +32,10 @@
     }>(),
     {
       options: () => [
-        {
-          name: 'profile',
-          redirectTo: '',
-        },
+        // {
+        //   name: 'profile',
+        //   redirectTo: '',
+        // },
         {
           name: 'logout',
           redirectTo: 'login',

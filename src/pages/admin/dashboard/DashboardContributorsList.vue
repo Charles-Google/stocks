@@ -1,33 +1,32 @@
 <template>
   <va-card class="flex dashboard-contributors-list">
     <va-card-title>
-      <h1>{{ t('dashboard.charts.topContributors') }}</h1>
+      <h1>推荐排行</h1>
       <div class="mr-0 va-text-right">
-        <a class="mr-0 va-link" :disabled="contributors.length <= step" @click="showNext">
-          {{ t('dashboard.charts.showNextFive') }}
-        </a>
+        <a class="mr-0 va-link" :disabled="contributors.length <= step" @click="showNext"> 下一页 </a>
       </div>
     </va-card-title>
 
     <va-card-content>
-      <va-inner-loading :loading="loading" style="width: 100%">
+      <!-- <va-inner-loading :loading="loading" style="width: 100%">
         <div v-for="(contributor, idx) in visibleList" :key="idx" class="mb-4">
           <va-progress-bar :model-value="getPercent(contributor.contributions)" :color="getProgressBarColor(idx)">
             {{ contributor.contributions }} {{ t('dashboard.charts.commits') }}
           </va-progress-bar>
           <p class="mt-2">{{ contributor.login }}</p>
         </div>
-      </va-inner-loading>
+      </va-inner-loading> -->
+      <div v-for="(probability, idx) in visibleList" :key="idx" class="mb-4"></div>
     </va-card-content>
   </va-card>
 </template>
 
 <script setup lang="ts">
   import { onMounted, ref } from 'vue'
-  import { useI18n } from 'vue-i18n'
+  // import { useI18n } from 'vue-i18n'
   import axios from 'axios'
 
-  const { t } = useI18n()
+  // const { t } = useI18n()
 
   interface IContributor {
     contributions: number
@@ -56,9 +55,9 @@
     loading.value = false
   }
 
-  function getPercent(val: number) {
-    return (val / progressMax.value) * 100
-  }
+  // function getPercent(val: number) {
+  //   return (val / progressMax.value) * 100
+  // }
 
   function showNext() {
     visibleList.value = contributors.value.slice(page.value * step.value, page.value * step.value + step.value)
@@ -71,17 +70,17 @@
     }
   }
 
-  function getProgressBarColor(idx: number) {
-    const themeColors = ['primary', 'success', 'info', 'danger', 'warning']
+  // function getProgressBarColor(idx: number) {
+  //   const themeColors = ['primary', 'success', 'info', 'danger', 'warning']
 
-    if (idx < themeColors.length) {
-      return themeColors[idx]
-    }
+  //   if (idx < themeColors.length) {
+  //     return themeColors[idx]
+  //   }
 
-    // Get random color if idx out of colors array
-    const keys = Object.keys(themeColors)
-    return themeColors[keys[(keys.length * Math.random()) << 0] as unknown as number]
-  }
+  //   // Get random color if idx out of colors array
+  //   const keys = Object.keys(themeColors)
+  //   return themeColors[keys[(keys.length * Math.random()) << 0] as unknown as number]
+  // }
 </script>
 
 <style scoped lang="scss">

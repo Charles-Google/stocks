@@ -3,31 +3,19 @@
     <template #left>
       <div class="left">
         <va-icon-menu-collapsed
+          style="cursor: pointer"
           :class="{ 'x-flip': isSidebarMinimized }"
           class="va-navbar__item"
           :color="colors.primary"
           @click="isSidebarMinimized = !isSidebarMinimized"
         />
         <router-link to="/">
-          <vuestic-logo class="logo" />
+          <vuestic-logo />
         </router-link>
       </div>
     </template>
-    <div class="app-navbar-center">
-      <span class="hidden md:block mr-2">{{ t('navbar.messageUs') }}</span>
-      <a class="hidden md:block mr-2" href="mailto:hello@epicmax.co" target="_blank" :style="{ color: colors.primary }">
-        hello@epicmax.co
-      </a>
-      <va-button
-        href="https://github.com/epicmaxco/vuestic-admin"
-        color="#000000"
-        class="hidden lg:block"
-        icon="github"
-        target="_blank"
-      >
-        {{ t('navbar.repository') }}
-      </va-button>
-    </div>
+    <!-- 中间部分放这里,目前没什么好的想法 -->
+    <div class="app-navbar-center"></div>
     <template #right>
       <app-navbar-actions class="app-navbar__actions" :user-name="userName" />
     </template>
@@ -38,14 +26,12 @@
   import { computed } from 'vue'
   import { storeToRefs } from 'pinia'
   import { useGlobalStore } from '../../stores/global-store'
-  import { useI18n } from 'vue-i18n'
   import { useColors } from 'vuestic-ui'
   import VuesticLogo from '../VuesticLogo.vue'
   import VaIconMenuCollapsed from '../icons/VaIconMenuCollapsed.vue'
   import AppNavbarActions from './components/AppNavbarActions.vue'
 
   const GlobalStore = useGlobalStore()
-  const { t } = useI18n()
 
   const { isSidebarMinimized, userName } = storeToRefs(GlobalStore)
 
@@ -104,5 +90,8 @@
         display: none;
       }
     }
+  }
+  .logo {
+    width: 10vw;
   }
 </style>

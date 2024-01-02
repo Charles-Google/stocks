@@ -33,6 +33,10 @@
     {
       options: () => [
         {
+          code: 'cn',
+          name: 'simplified_chinese',
+        },
+        {
           code: 'gb',
           name: 'english',
         },
@@ -44,10 +48,7 @@
           code: 'br',
           name: 'brazilian_portuguese',
         },
-        {
-          code: 'cn',
-          name: 'simplified_chinese',
-        },
+
         {
           code: 'ir',
           name: 'persian',

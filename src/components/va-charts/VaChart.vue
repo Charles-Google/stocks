@@ -1,5 +1,6 @@
 <template>
-  <component :is="chartComponent" ref="chart" class="va-chart" :chart-options="chartOptions" :chart-data="data" />
+  // @ts-ignore
+  <component:any :is="chartComponent" ref="chart" class="va-chart" :chart-options="chartOptions" :chart-data="data" />
 </template>
 
 <script setup lang="ts">
@@ -18,7 +19,7 @@
 
   const chartComponent = computed(() => chartTypesMap[props.type])
 
-  const chartOptions = computed(() => ({
+  const chartOptions: any = computed(() => ({
     ...defaultConfig,
     ...props.options,
   }))
@@ -26,6 +27,7 @@
 
 <style lang="scss">
   .va-chart {
+    margin-top: 2vw;
     width: 100%;
     height: 100%;
     display: flex;

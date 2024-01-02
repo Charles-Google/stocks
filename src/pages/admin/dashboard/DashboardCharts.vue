@@ -1,8 +1,10 @@
 <template>
   <div class="grid grid-cols-12 gap-6">
-    <va-card v-if="lineChartDataGenerated" class="col-span-12 lg:col-span-6">
+    <va-card v-if="lineChartDataGenerated" class="col-span-12 lg:col-span-9">
       <va-card-title>
-        <h1>{{ t('dashboard.charts.trendyTrends') }}</h1>
+        <h1>今日推荐</h1>
+        <h1>股票名字(股票编号)</h1>
+
         <div>
           <va-button
             class="m-1"
@@ -11,7 +13,7 @@
             :disabled="datasetIndex === minIndex"
             @click="setDatasetIndex(datasetIndex - 1)"
           >
-            {{ t('dashboard.charts.showInLessDetail') }}
+            显示更多
           </va-button>
           <va-button
             class="m-1"
@@ -20,7 +22,7 @@
             :disabled="datasetIndex === maxIndex - 1"
             @click="setDatasetIndex(datasetIndex + 1)"
           >
-            {{ t('dashboard.charts.showInMoreDetail') }}
+            简略信息
           </va-button>
         </div>
       </va-card-title>
@@ -29,7 +31,7 @@
       </va-card-content>
     </va-card>
 
-    <va-card class="col-span-12 sm:col-span-6 lg:col-span-3">
+    <!-- <va-card class="col-span-12 sm:col-span-6 lg:col-span-3">
       <va-card-title>
         <h1>{{ t('dashboard.charts.loadingSpeed') }}</h1>
         <va-button icon="print" plain @click="printChart" />
@@ -37,7 +39,7 @@
       <va-card-content v-if="doughnutChartDataGenerated">
         <va-chart ref="doughnutChart" class="chart chart--donut" :data="doughnutChartDataGenerated" type="doughnut" />
       </va-card-content>
-    </va-card>
+    </va-card> -->
 
     <dashboard-contributors-chart class="col-span-12 sm:col-span-6 lg:col-span-3" />
   </div>
