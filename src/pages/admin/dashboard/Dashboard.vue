@@ -3,10 +3,34 @@
     <dashboard-charts />
     <div class="sceondrow">
       <ChatPage class="chatblock"></ChatPage>
-      <va-card class="col-span-12 sm:col-span-6 md:col-span-3" stripe stripe-color="info">
-        <va-card-title>{{ t('cards.title.withStripe') }}</va-card-title>
-        <va-card-content>{{ t('cards.contentTextLong') }}</va-card-content>
-      </va-card>
+      <div class="twocards">
+        <va-card class="cardblock" stripe stripe-color="danger">
+          <va-card-title>最高收益</va-card-title>
+          <va-card-content>
+            <h5>收益率<span>icon</span></h5>
+            <h1>23.4%</h1>
+            <!-- 之后会改成动态的 -->
+            <div class="stockname">鸿茅药酒</div>
+            <div class="stockid">编号:234231</div>
+            <div class="price">当前股价: <span>4.55</span></div>
+
+            <va-button>点击购入</va-button>
+          </va-card-content>
+        </va-card>
+        <va-card class="cardblock" stripe stripe-color="info">
+          <va-card-title>最低风险</va-card-title>
+          <va-card-content>
+            <h5>增值概率<span>icon</span></h5>
+            <h1>97.1%</h1>
+            <!-- 之后会改成动态的 -->
+            <div class="stockname">特斯拉</div>
+            <div class="stockid">编号:114514</div>
+            <div class="price">当前股价: <span>12.45</span></div>
+
+            <va-button>点击购入</va-button>
+          </va-card-content>
+        </va-card>
+      </div>
     </div>
 
     <!-- <dashboard-info-block /> -->
@@ -35,8 +59,8 @@
 
   import DashboardCharts from './DashboardCharts.vue'
   import ChatPage from '../ui/chat/ChatPage.vue'
-  import { useI18n } from 'vue-i18n'
-  const { t } = useI18n()
+  // import { useI18n } from 'vue-i18n'
+  // const { t } = useI18n()
   // import DashboardInfoBlock from './DashboardInfoBlock.vue'
   // import DashboardTabs from './DashboardTabs.vue'
   // import DashboardMap from './DashboardMap.vue'
@@ -58,12 +82,52 @@
         justify-content: space-between;
       }
     }
-    .chatblock {
-      margin-top: 2vw;
-      width: 85%;
-    }
   }
   .sceondrow {
     display: flex;
+    margin-top: 2vw;
+    height: 35vw;
+    .chatblock {
+      width: 81%;
+    }
+    .twocards {
+      width: 15.5%;
+      margin-left: 3%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .cardblock {
+      width: 100%;
+      margin-left: 3%;
+      height: 48%;
+      overflow: hidden;
+      font-weight: bold;
+
+      // .va-card-content{
+      //   display: flex;
+      // }
+      h5 {
+        font-size: 1.3vw;
+      }
+      h1 {
+        font-size: 2.3vw;
+        color: orangered;
+      }
+      .price {
+        margin-bottom: 0.4vw;
+      }
+      .stockname {
+        margin-bottom: 0.2vw;
+        font-size: 1.6vw;
+        background-color: skyblue;
+      }
+      .stockid {
+        margin-bottom: 0.2vw;
+      }
+      .va-botton {
+        margin-left: 0.8vw;
+      }
+    }
   }
 </style>

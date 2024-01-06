@@ -7,7 +7,7 @@
             <va-icon :name="route.meta.icon" class="va-sidebar-item__icon" />
 
             <va-sidebar-item-title>
-              {{ t(route.displayName) }}
+              {{ route.displayName }}
             </va-sidebar-item-title>
 
             <va-icon v-if="route.children" :name="accordionValue[idx] ? 'expand_less' : 'expand_more'" />
@@ -20,7 +20,7 @@
             <div class="va-sidebar-item__icon" />
 
             <va-sidebar-item-title>
-              {{ t(child.displayName) }}
+              {{ child.displayName }}
             </va-sidebar-item-title>
           </va-sidebar-item-content>
         </va-sidebar-item>
@@ -33,8 +33,8 @@
   import { onMounted, ref } from 'vue'
   import { INavigationRoute } from '../NavigationRoutes'
   import { useRoute } from 'vue-router'
-  import { useI18n } from 'vue-i18n'
-  const { t } = useI18n()
+  // import { useI18n } from 'vue-i18n'
+  // const { t } = useI18n()
 
   const props = withDefaults(
     defineProps<{

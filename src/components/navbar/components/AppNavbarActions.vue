@@ -1,7 +1,7 @@
 <template>
   <div class="app-navbar-actions">
     <color-dropdown class="app-navbar-actions__item" />
-    <language-dropdown class="app-navbar-actions__item" />
+    <!-- <language-dropdown class="app-navbar-actions__item" /> -->
     <profile-dropdown class="app-navbar-actions__item app-navbar-actions__item--profile">
       <span>{{ userName }}</span>
     </profile-dropdown>
@@ -9,7 +9,7 @@
 </template>
 
 <script setup lang="ts">
-  import LanguageDropdown from './dropdowns/LanguageDropdown.vue'
+  // import LanguageDropdown from './dropdowns/LanguageDropdown.vue'
   import ProfileDropdown from './dropdowns/ProfileDropdown.vue'
   import ColorDropdown from './dropdowns/ColorDropdown.vue'
 

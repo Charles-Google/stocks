@@ -46,21 +46,21 @@
 </template>
 
 <script setup lang="ts">
-  import { ref } from 'vue'
-  import { useI18n } from 'vue-i18n'
+  // import { ref } from 'vue'
+  // import { useI18n } from 'vue-i18n'
 
-  import { doughnutChartData, lineChartData } from '../../../data/charts'
+  import { lineChartData } from '../../../data/charts'
   import { useChartData } from '../../../data/charts/composables/useChartData'
   import { usePartOfChartData } from './composables/usePartOfChartData'
   import VaChart from '../../../components/va-charts/VaChart.vue'
   import DashboardContributorsChart from './DashboardContributorsList.vue'
 
-  const { t } = useI18n()
+  // const { t } = useI18n()
 
-  const doughnutChart = ref()
+  // const doughnutChart = ref()
 
   const dataGenerated = useChartData(lineChartData, 0.7)
-  const doughnutChartDataGenerated = useChartData(doughnutChartData)
+  // const doughnutChartDataGenerated = useChartData(doughnutChartData)
 
   const {
     dataComputed: lineChartDataGenerated,
@@ -70,25 +70,25 @@
     setDatasetIndex,
   } = usePartOfChartData(dataGenerated)
 
-  function printChart() {
-    const windowObjectReference = window.open('', 'Print', 'height=600,width=800') as Window
+  // function printChart() {
+  //   const windowObjectReference = window.open('', 'Print', 'height=600,width=800') as Window
 
-    const img = windowObjectReference.document.createElement('img')
+  //   const img = windowObjectReference.document.createElement('img')
 
-    img.src = `${(document.querySelector('.chart--donut canvas') as HTMLCanvasElement | undefined)?.toDataURL(
-      'image/png',
-    )}`
+  //   img.src = `${(document.querySelector('.chart--donut canvas') as HTMLCanvasElement | undefined)?.toDataURL(
+  //     'image/png',
+  //   )}`
 
-    img.onload = () => {
-      windowObjectReference?.document.body.appendChild(img)
-    }
+  //   img.onload = () => {
+  //     windowObjectReference?.document.body.appendChild(img)
+  //   }
 
-    windowObjectReference.print()
+  //   windowObjectReference.print()
 
-    windowObjectReference.onafterprint = () => {
-      windowObjectReference?.close()
-    }
-  }
+  //   windowObjectReference.onafterprint = () => {
+  //     windowObjectReference?.close()
+  //   }
+  // }
 </script>
 
 <style scoped>

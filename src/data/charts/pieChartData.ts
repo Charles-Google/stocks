@@ -1,12 +1,12 @@
 import { TLineChartData } from '../types'
 
 export const pieChartData: TLineChartData = {
-  labels: ['Africa', 'Asia', 'Europe'],
+  labels: ['下跌', '上涨', '平稳'],
   datasets: [
     {
       label: 'Population (millions)',
       backgroundColor: ['primary', 'warning', 'danger'],
-      data: [2478, 5267, 734],
+      data: [8, 45, 7],
     },
   ],
 }

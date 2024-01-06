@@ -22,7 +22,7 @@
         </va-card-content>
       </va-card>
 
-      <va-card v-if="pieChartDataGenerated" class="chart-widget md:col-span-6 col-span-12">
+      <va-card v-if="pieChartDataGenerated" class="chart-widget md:col-span-3 col-span-12">
         <va-card-title>{{ t('charts.pieChart') }}</va-card-title>
         <va-card-content>
           <va-chart :data="pieChartDataGenerated" type="pie" />

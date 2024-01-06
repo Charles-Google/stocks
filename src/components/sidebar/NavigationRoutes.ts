@@ -13,14 +13,21 @@ export default {
   routes: [
     {
       name: 'dashboard',
-      displayName: 'menu.dashboard',
+      displayName: '推荐主页',
       meta: {
         icon: 'vuestic-iconset-dashboard',
       },
     },
+    // {
+    //   name: 'store',
+    //   displayName: '我的持仓',
+    //   meta: {
+    //     icon: 'vuestic-iconset-dashboard',
+    //   },
+    // },
     {
       name: 'statistics',
-      displayName: 'menu.statistics',
+      displayName: '我的持仓',
       meta: {
         icon: 'vuestic-iconset-statistics',
       },
@@ -169,33 +176,11 @@ export default {
     },
     {
       name: 'maps',
-      displayName: 'menu.maps',
+      displayName: '我的持仓',
       meta: {
         icon: 'vuestic-iconset-maps',
       },
       disabled: true,
-      children: [
-        {
-          name: 'maplibre-maps',
-          displayName: 'menu.maplibre-maps',
-        },
-        {
-          name: 'yandex-maps',
-          displayName: 'menu.yandex-maps',
-        },
-        {
-          name: 'leaflet-maps',
-          displayName: 'menu.leaflet-maps',
-        },
-        {
-          name: 'bubble-maps',
-          displayName: 'menu.bubble-maps',
-        },
-        {
-          name: 'line-maps',
-          displayName: 'menu.line-maps',
-        },
-      ],
     },
     {
       name: 'pages',

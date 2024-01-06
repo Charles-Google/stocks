@@ -1,6 +1,6 @@
 <template>
-  <va-card class="chat w-full">
-    <va-card-title>{{ t('chat.title') }}</va-card-title>
+  <va-card class="chat">
+    <va-card-title>智能推荐</va-card-title>
     <va-card-content>
       <chat v-model="chatMessages" />
     </va-card-content>
@@ -9,9 +9,9 @@
 
 <script setup lang="ts">
   import Chat from './Chat.vue'
-  import { useI18n } from 'vue-i18n'
+  // import { useI18n } from 'vue-i18n'
   import { ref } from 'vue'
-  const { t } = useI18n()
+  // const { t } = useI18n()
 
   const chatMessages = ref([
     {

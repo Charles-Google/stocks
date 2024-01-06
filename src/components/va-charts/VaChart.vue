@@ -1,6 +1,5 @@
 <template>
-  // @ts-ignore
-  <component:any :is="chartComponent" ref="chart" class="va-chart" :chart-options="chartOptions" :chart-data="data" />
+  <component :is="chartComponent" ref="chart" class="va-chart" :chart-options="chartOptions" :chart-data="data" />
 </template>
 
 <script setup lang="ts">
