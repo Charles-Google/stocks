@@ -18,7 +18,7 @@
 
   const chartComponent = computed(() => chartTypesMap[props.type])
 
-  const chartOptions: any = computed(() => ({
+  const chartOptions = computed(() => ({
     ...defaultConfig,
     ...props.options,
   }))
@@ -26,9 +26,8 @@
 
 <style lang="scss">
   .va-chart {
-    margin-top: 2vw;
     width: 100%;
-    height: 100%;
+    height: 120%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,7 +40,7 @@
     canvas {
       width: 100%;
       height: auto;
-      min-height: 320px;
+      min-height: 120px;
     }
   }
 </style>

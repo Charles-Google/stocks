@@ -10,7 +10,8 @@
     "company": "BLUEGRAIN",
     "email": "marcianeal@bluegrain.com",
     "phone": "+1 (950) 575-2330",
-    "address": "642 Overbaugh Place, Loretto, Rhode Island, 3756"
+    "address": "642 Overbaugh Place, Loretto, Rhode Island, 3756",
+    "status": "上涨"
   },
   {
     "id": "234567",
@@ -23,7 +24,8 @@
     "company": "QUALITERN",
     "email": "corrineoliver@qualitern.com",
     "phone": "+1 (955) 402-3254",
-    "address": "532 Colin Place, Talpa, Connecticut, 7461"
+    "address": "532 Colin Place, Talpa, Connecticut, 7461",
+    "status": "下跌"
   },
   {
     "id": "214232",
@@ -36,7 +38,8 @@
     "company": "PREMIANT",
     "email": "tuckerkaufman@premiant.com",
     "phone": "+1 (954) 475-2928",
-    "address": "887 Winthrop Street, Tryon, Florida, 3912"
+    "address": "887 Winthrop Street, Tryon, Florida, 3912",
+    "status": "平稳"
   },
   {
     "id": "567454",
@@ -48,6 +51,7 @@
     "gender": "female",
     "company": "ORBIN",
     "email": "daisykramer@orbin.com",
+    "status": "平稳",
     "phone": "+1 (858) 416-3088",
     "address": "821 Louise Terrace, Waterview, Indiana, 6960"
   },
@@ -57,9 +61,11 @@
     "balance": "$2,538.94",
     "picture": "../../../../public/img/5.png",
     "name": "字节跳动",
+    "age": 32,
     "gender": "female",
     "company": "SNACKTION",
     "email": "mindypotts@snacktion.com",
+    "status": "平稳",
     "phone": "+1 (835) 508-2695",
     "address": "418 Broadway , Whitehaven, New York, 7690"
   },
@@ -70,6 +76,7 @@
     "picture": "../../../../public/img/6.png",
     "age": 35,
     "name": "万达控股",
+    "status": "平稳",
     "gender": "male",
     "company": "SATIANCE",
     "email": "dotsonfranks@satiance.com",
@@ -81,6 +88,7 @@
     "starred": false,
     "balance": "$2,601.91",
     "picture": "../../../../public/img/7.png",
+    "status": "平稳",
     "age": 29,
     "name": "农夫山泉",
     "gender": "female",
@@ -94,6 +102,7 @@
     "starred": false,
     "balance": "$1,718.36",
     "picture": "../../../../public/img/8.png",
+    "status": "平稳",
     "age": 37,
     "name": "米哈游",
     "gender": "male",

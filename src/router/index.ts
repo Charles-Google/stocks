@@ -70,7 +70,7 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         name: 'maps',
-        path: 'maps',
+        path: 'store',
         component: () => import('../pages/admin/tables/markup-tables/MarkupTables.vue'),
       },
       {
