@@ -29,9 +29,7 @@
         class="va-chat__input mr-2"
         @keypress.enter="sendMessage"
       />
-      <va-button @click="sendMessage()">
-        {{ t('chat.sendButton') }}
-      </va-button>
+      <va-button @click="sendMessage()"> 发送 </va-button>
     </div>
   </div>
 </template>
@@ -40,10 +38,10 @@
   import vStickyScroll from './StickyScroll'
   import { useColors } from 'vuestic-ui'
   import { ref } from 'vue'
-  import { useI18n } from 'vue-i18n'
+  // import { useI18n } from 'vue-i18n'
 
   const { colors } = useColors()
-  const { t } = useI18n()
+  // const { t } = useI18n()
 
   const props = withDefaults(
     defineProps<{

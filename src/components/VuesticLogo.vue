@@ -25,12 +25,12 @@
 </script>
 <style lang="scss" scoped>
   .logo {
-    background: no-repeat url(../../logo.png);
+    background: no-repeat url(../../breed.png);
     background-size: cover;
-    width: 3.8vw !important;
+    width: 13.8vw !important;
     height: 3.8vw;
     margin-bottom: -1.4vw;
     margin-top: -1.4vw;
-    border-radius: 50%;
+    // border-radius: 50%;
   }
 </style>
