@@ -18,6 +18,11 @@ const routes: Array<RouteRecordRaw> = [
     component: AppLayout,
     children: [
       {
+        name: 'details',
+        path: 'details',
+        component: () => import('../pages/admin/statistics/charts/Charts.vue'),
+      },
+      {
         name: 'dashboard',
         path: 'dashboard',
         component: () => import('../pages/admin/dashboard/Dashboard.vue'),
@@ -48,25 +53,7 @@ const routes: Array<RouteRecordRaw> = [
       {
         name: 'forms',
         path: 'forms',
-        component: RouteViewComponent,
-        children: [
-          {
-            name: 'form-elements',
-            path: 'form-elements',
-            component: () => import('../pages/admin/forms/form-elements/FormElements.vue'),
-            meta: {
-              wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/inputs',
-            },
-          },
-          {
-            name: 'medium-editor',
-            path: 'medium-editor',
-            component: () => import('../pages/admin/forms/medium-editor/MediumEditor.vue'),
-            meta: {
-              wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Medium-Editor',
-            },
-          },
-        ],
+        component: () => import('../pages/admin/forms/form-elements/FormElements.vue'),
       },
       {
         name: 'maps',

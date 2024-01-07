@@ -6,10 +6,10 @@
   import { computed, ref } from 'vue'
   import type { TChartOptions } from 'vue-chartjs/dist/types'
   import { defaultConfig, chartTypesMap } from './vaChartConfigs'
-  import { TChartData } from '../../data/types'
+  // import { TChartData } from '../../data/types'
 
   const props = defineProps<{
-    data: TChartData
+    data: any
     options?: TChartOptions<'line' | 'bar' | 'bubble' | 'doughnut' | 'pie'>
     type: keyof typeof chartTypesMap
   }>()
@@ -18,9 +18,9 @@
 
   const chartComponent = computed(() => chartTypesMap[props.type])
 
-  const chartOptions = computed(() => ({
+  const chartOptions: any = computed(() => ({
     ...defaultConfig,
-    ...props.options,
+    // ...props.options,
   }))
 </script>
 
@@ -40,7 +40,7 @@
     canvas {
       width: 100%;
       height: auto;
-      min-height: 120px;
+      min-height: 100px;
     }
   }
 </style>

@@ -21,7 +21,7 @@
         <!-- <va-list-label> 1 </va-list-label> -->
 
         <template v-for="(stock, i) in stocks" :key="'item' + stock.id">
-          <va-list-item clickable>
+          <va-list-item clickable to="details">
             <va-list-item-section avatar>
               <va-avatar>
                 <img :src="stock.picture" :alt="stock.name" />
@@ -51,6 +51,7 @@
 </template>
 
 <script setup lang="ts">
+  import data from './data.json'
   import { ref } from 'vue'
   // import { useI18n } from 'vue-i18n'
   // import axios from 'axios'
@@ -69,7 +70,6 @@
   const step = ref(5)
   const page = ref(0)
 
-  import data from './data.json'
   const stocks = ref(data.slice(0, 8))
 
   // onMounted(() => {

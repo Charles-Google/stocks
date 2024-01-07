@@ -14,7 +14,7 @@
             <div class="stockid">编号:234231</div>
             <div class="price">当前股价: <span>4.55</span></div>
 
-            <va-button>点击购入</va-button>
+            <va-button>查看详情</va-button>
           </va-card-content>
         </va-card>
         <va-card class="cardblock" stripe stripe-color="info">
@@ -27,7 +27,7 @@
             <div class="stockid">编号:114514</div>
             <div class="price">当前股价: <span>12.45</span></div>
 
-            <va-button>点击购入</va-button>
+            <va-button>查看详情</va-button>
           </va-card-content>
         </va-card>
       </div>

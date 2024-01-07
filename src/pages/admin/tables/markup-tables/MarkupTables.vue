@@ -64,7 +64,7 @@
             </td>
             <td>
               <!-- icon-right="expand_more" -->
-              <va-button>查看详情</va-button>
+              <va-button to="details">查看详情</va-button>
             </td>
           </tr>
         </tbody>

@@ -4,7 +4,7 @@
     <va-card v-if="lineChartDataGenerated" class="col-span-12 lg:col-span-9">
       <va-card-title>
         <h1>今日推荐</h1>
-        <h1 style="font-size: 1.5vw">贵州茅台(123456)&nbsp<va-button>点击查看</va-button></h1>
+        <h1 style="font-size: 1.5vw">贵州茅台(600519)&nbsp<va-button to="details">点击查看</va-button></h1>
 
         <div>
           <va-button
